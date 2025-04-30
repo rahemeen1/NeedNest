@@ -1,0 +1,63 @@
+.hero {
+  width: 100%;
+  min-height: 70vh;
+  background: linear-gradient(rgba(25, 54, 2, 0.5), rgba(8, 54, 2, 0.5)),
+    url("https://www.shutterstock.com/image-vector/modern-simple-abstract-dark-background-260nw-2255512107.jpg");
+  background-size: cover;
+  background-position: center;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.herotext {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Default Heading Styles */
+h1 {
+  font-size: 120px;
+  text-shadow: -7px -7px 0 black, 7px -5px 0 black, -5px 5px 0 black, 5px 5px 0 black;
+  margin: 0;
+  line-height: 1.1;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 80px;
+    text-shadow: -4px -4px 0 black, 4px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hero {
+    padding: 40px 10px;
+    min-height: 60vh;
+  }
+
+  h1 {
+    font-size: 50px;
+    text-shadow: -2px -2px 0 black, 2px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}

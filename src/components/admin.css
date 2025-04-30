@@ -1,0 +1,92 @@
+.admin-login-container {
+    min-height: 100vh;
+    background: linear-gradient(to right, #1b5e20, #2e7d32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+  }
+  
+  .admin-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.8s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  .admin-card h2 {
+    color: #144717;
+    margin-bottom: 10px;
+  }
+  
+  .admin-sub {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 25px;
+  }
+  
+  .admin-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .admin-card input:focus {
+    border-color: #144717;
+  }
+  
+  .admin-card button {
+    width: 100%;
+    background-color: #144717;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .admin-card button:hover {
+    background-color: #1b5e20;
+  }
+  .admin-back-home {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .admin-home-link {
+    display: inline-block;
+    background-color: #144717;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .admin-home-link:hover {
+    background-color: #1b5e20;
+  }
+  

@@ -1,0 +1,114 @@
+
+
+.centre {
+  font-size: 32px;
+  color: #144717;
+  margin-bottom: 10px; /* Reduced margin */
+  text-align: center;
+  margin-top: 15px;
+}
+.single-fact {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.single-fact:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: bounce 0.4s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1.05) translateY(-5px);
+  }
+  50% {
+    transform: scale(1.08) translateY(-10px);
+  }
+  100% {
+    transform: scale(1.05) translateY(-5px);
+  }
+}
+
+.milestone {
+  padding: 50px 0;
+  margin-bottom: 100px; 
+  background: linear-gradient(rgba(45, 139, 64, 0.3), rgba(6, 71, 4, 0.3)),
+    url("https://images.unsplash.com/photo-1533563906091-fdfdffc3e3c4?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGdyZWVuJTIwbmF0dXJlfGVufDB8fDB8fHww");
+}
+.milestone2 {
+  padding: 100px 0;
+  background: url("https://wallpapers.com/images/hd/purple-pink-background-37sat4oc8sh4jlg6.jpg");
+}
+.text2 {
+  font-size: 18px;
+  margin-top: 20px;
+  color: white; /* Set text color to white */
+  line-height: 20px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* 👈 Adds left and right spacing */
+}
+
+.milestones-row {
+  display: flex;
+  justify-content: center; /* 👈 Centered grid */
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.single-fact {
+  background-color: rgba(128, 128, 128, 0.5);
+  outline: 2px solid #0000;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 22%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  position: relative;
+}
+
+.single-fact img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  margin-top: 2px;
+
+  margin-bottom: 15px;
+  display: block;
+}
+
+.single-fact h2 {
+  font-size: 24px; /* Adjusted font size */
+  margin-bottom: 10px;
+  color: #fbfbfc;
+}
+
+.single-fact p {
+  font-size: 14px; /* Adjusted font size */
+  color: #f3f1f1;
+}
+
+@media (max-width: 768px) {
+  .milestones-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .single-fact {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

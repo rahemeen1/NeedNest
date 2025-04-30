@@ -1,0 +1,224 @@
+/* Gallery */
+.gallery-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.heading-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading-title {
+  font-family: "Arial", sans-serif; 
+ 
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0e4f1e;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.tm-gallery-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tm-gallery-header {
+  font-family: "Arial", sans-serif; 
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0e4f1e;
+  text-align: center; /* Center the heading */
+  margin: 40px 0; /* Add vertical spacing */
+}
+
+.tm-gallery {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.tm-gallery figure {
+  position: relative;
+  z-index: 50;
+  overflow: hidden;
+  margin: 15px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tm-gallery figure img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.tm-gallery figure figcaption {
+  padding: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.tm-gallery figure figcaption::before,
+.tm-gallery figure figcaption::after {
+  pointer-events: none;
+}
+
+.tm-gallery figure figcaption,
+.tm-gallery figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.tm-gallery figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.tm-gallery figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.tm-gallery figure h2 span {
+  font-weight: 800;
+}
+
+.tm-gallery figure p {
+  margin: 0;
+}
+
+.tm-gallery figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+figure.effect-goliath {
+  background: #12551f;
+}
+
+figure.effect-goliath img,
+figure.effect-goliath h2 {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+figure.effect-goliath img {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-goliath h2,
+figure.effect-goliath p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 10px;
+  text-align: center;
+  width: 100%;
+}
+
+figure.effect-goliath p {
+  text-transform: none;
+  font-size: 90%;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 50px, 0);
+}
+
+figure.effect-goliath:hover img {
+  -webkit-transform: translate3d(0, -80px, 0);
+  transform: translate3d(0, -80px, 0);
+}
+
+figure.effect-goliath:hover h2 {
+  -webkit-transform: translate3d(0, -100px, 0);
+  transform: translate3d(0, -100px, 0);
+}
+
+figure.effect-goliath:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.tm-gallery .tm-gallery-item.hide {
+  display: none;
+}
+
+.tm-gallery .tm-gallery-item.show {
+  display: block;
+  animation: show 0.5s ease;
+}
+
+.tm-paging {
+  display: flex;
+  justify-content: center;
+}
+
+.tm-paging-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #194a1e;
+  margin: 7.5px;
+}
+
+.tm-paging-link:hover,
+.tm-paging-link.active {
+  background-color: #194a1e;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

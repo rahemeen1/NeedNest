@@ -1,0 +1,80 @@
+.headingtest {
+  font-size: 40px;
+  font-weight: bold;
+  color: #0e5311;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonial-section {
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  margin-top: 40px;
+}
+
+.testimonial-box {
+  background: #fff;
+  border-left: 4px solid #0e5311;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: #212121;
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 50px;
+}
+
+.testimonial-author {
+  text-align: center;
+  font-weight: bold;
+  color: #0e5311;
+  font-size: 16px;
+}
+
+.testimonial-author span {
+  color: #0e5311;
+  font-weight: normal;
+}
+
+.section-heading .line- {
+  height: 2px;
+  width: 40px;
+  background-color: #0e5311;
+  margin: 0 auto 10px;
+}
+
+/* Sliding effect for the testimonial box */
+.testimonial-slide {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.testimonial-slide > div {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .testimonial-box {
+    padding: 20px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+  }
+
+  .testimonial-author {
+    font-size: 14px;
+  }
+}
