@@ -1,4 +1,3 @@
-// Gallery.js
 import React, { useState, useEffect } from "react";
 import "./gallery.css";
 import img1 from "./Logos/g1.JPG";
@@ -29,7 +28,7 @@ const images = [
   { src: img2, description: "Donation" },
 ];
 
-const itemsPerPage = 5; // Number of items per page
+const itemsPerPage = 5;
 
 const Gallery = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -46,8 +45,8 @@ const Gallery = () => {
   };
 
   useEffect(() => {
-    setCurrentPage(1); // Reset to first page when images change
-  }, [images]);
+    setCurrentPage(1);
+  }, []); // ✅ Fixed: no unnecessary dependency
 
   return (
     <div id="gallery" className="tm-content tm-content-small-top">
@@ -61,9 +60,8 @@ const Gallery = () => {
             <div className="tm-gallery tm-mb-80">
               {showItems().map((item, index) => (
                 <figure className="effect-goliath tm-gallery-item" key={index}>
-                  <img src={item.src} alt={item.title} />
+                  <img src={item.src} alt={item.description || "Gallery image"} />
                   <figcaption>
-                    <h2>{item.title}</h2>
                     <p>{item.description}</p>
                     <a href={item.src} className="magnific-popup">
                       View more
@@ -73,19 +71,19 @@ const Gallery = () => {
               ))}
             </div>
           </div>
+
           <div className="pagination">
             <div className="tm-paging tm-mb-130">
               {Array.from({ length: totalPages }, (_, index) => (
-                <a
+                <button
                   key={index}
-                  href="javascript:void(0);"
                   className={`tm-paging-link ${
                     currentPage === index + 1 ? "active" : ""
                   }`}
                   onClick={() => handlePaginationClick(index + 1)}
                 >
                   {index + 1}
-                </a>
+                </button>
               ))}
             </div>
           </div>

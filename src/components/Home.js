@@ -74,13 +74,13 @@ const Home = () => {
               <div className="col-12 col-lg-6">
                 <div className="about-thumbnail homepage mb-100">
                   <div className="first-img wow fadeInUp">
-                    <img src={c2} alt="Image 1" />
+                    <img src={c2} alt="Img 1" />
                   </div>
                   <div className="second-img wow fadeInUp">
-                    <img src={c1} alt="Image 2" />
+                    <img src={c1} alt="Spider 2" />
                   </div>
                   <div className="third-img wow fadeInUp">
-                    <img src={c3} alt="Image 3" />
+                    <img src={c3} alt="Pic 3" />
                   </div>
                 </div>
               </div>
