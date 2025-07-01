@@ -4,7 +4,7 @@ import col1 from "./Logos/logo1.jpeg";
 import col2 from "./Logos/logo2.jpeg";
 import col3 from "./Logos/logo3.jpeg";
 import col4 from "./Logos/logo4.jpeg";
-import col5 from "./Logos/logo5.jpeg";
+
 
 const collaboratorsData = [
   {
