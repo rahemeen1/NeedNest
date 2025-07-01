@@ -40,12 +40,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link className="btn donate-btn" to="/donate" onClick={toggleMenu}>
+          <Link className="btn donate-btn" to="/" onClick={toggleMenu}>
             Donate Now
           </Link>
         </li>
         <li>
-          <Link className="btn admin-btn" to="/admin" onClick={toggleMenu}>
+          <Link className="btn admin-btn" to="/" onClick={toggleMenu}>
             Admin Login
           </Link>
         </li>
