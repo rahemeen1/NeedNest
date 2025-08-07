@@ -39,16 +39,18 @@ const Navbar = () => {
             Contact Us
           </Link>
         </li>
-        <li>
-          <Link className="btn donate-btn" to="/" onClick={toggleMenu}>
-            Donate Now
-          </Link>
-        </li>
-        <li>
-          <Link className="btn admin-btn" to="/" onClick={toggleMenu}>
-            Admin Login
-          </Link>
-        </li>
+       <li>
+  <a className="btn donate-btn" href="https://neednest.free.nf/signup.php" target="_blank" rel="noopener noreferrer">
+    Donate Now
+  </a>
+</li>
+<li>
+  <a className="btn admin-btn" href="https://neednest.free.nf/adminlogin.php" target="_blank" rel="noopener noreferrer">
+    Admin Login
+  </a>
+</li>
+
+
       </ul>
 
       <div className="sidemenu" onClick={toggleMenu}>
