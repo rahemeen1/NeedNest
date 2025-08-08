@@ -41,9 +41,7 @@ const HeroCarousel = () => {
             <div className="overlay">
               <h1>{slide.heading}</h1>
               <p>{slide.text}</p>
-               <Link className="btn donate-btn" to="/Backend/signup.php">
-                Donate Now
-              </Link>
+              
             </div>
           </div>
         ))}
