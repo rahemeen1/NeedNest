@@ -16,9 +16,7 @@ const Testimonial = () => {
         setTestimonials(data.testimonials);
       }
     })
-    .catch(error => {
-      console.error("Fetch error:", error);
-    });
+   
 }, []);
 
 
