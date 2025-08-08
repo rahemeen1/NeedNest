@@ -41,7 +41,6 @@ const HeroCarousel = () => {
             <div className="overlay">
               <h1>{slide.heading}</h1>
               <p>{slide.text}</p>
-              
             </div>
           </div>
         ))}
