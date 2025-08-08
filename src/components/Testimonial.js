@@ -7,20 +7,15 @@ const Testimonial = () => {
   const [index, setIndex] = useState(0);
 
   // Fetch from backend
-useEffect(() => {
-  fetch("https://neednest.free.nf/getTestimonials.php")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("Fetched testimonials:", data); // ✅ Console debug
-      if (data.success) {
-        setTestimonials(data.testimonials);
-      } else {
-        console.error("Fetch failed:", data);
-      }
-    })
-   
-}, []);
-
+  useEffect(() => {
+    fetch("http://localhost/NeedNest/Backend/getTestimonials.php")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          setTestimonials(data.testimonials);
+        }
+      });
+  }, []);
 
   // Auto-slide every 5 seconds
   useEffect(() => {
