@@ -18,7 +18,7 @@ useEffect(() => {
         console.error("Fetch failed:", data);
       }
     })
-    .catch((err) => console.error("Fetch error:", err));
+   
 }, []);
 
 
