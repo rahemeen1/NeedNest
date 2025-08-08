@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import "./about.css";
 import img1 from "./Logos/Rahemeen.jpg";
@@ -14,8 +13,7 @@ const AboutUs = () => {
   const [mv, setMv] = useState([]);
 
  useEffect(() => {
- fetch("https://neednest.free.nf/getmission_vision.php")
-
+  fetch("http://localhost/NeedNest/Backend/getmission_vision.php")
   .then(res => {
     console.log("Response status:", res.status);
     return res.text(); // get raw response as text for debugging
