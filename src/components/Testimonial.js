@@ -8,7 +8,7 @@ const Testimonial = () => {
 
   // Fetch from backend
 useEffect(() => {
-  fetch("http://localhost/NeedNest/Backend/getTestimonials.php")
+  fetch("https://neednest.free.nf/getTestimonials.php")
     .then((res) => res.json())
     .then((data) => {
       console.log("Fetched testimonials:", data); // ✅ Console debug
