@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from "react";
 import "./Testimonial.css";
 import patternBg from "./Logos/pattern.png";
-
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json");
 const Testimonial = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [index, setIndex] = useState(0);
 
   // Fetch from backend
-  useEffect(() => {
-  fetch("https://neednest.free.nf/getTestimonials.php")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("Fetched Testimonials:", data); // Debug log
+ useEffect(() => {
+  fetch("https://cors-anywhere.herokuapp.com/https://neednest.free.nf/getTestimonials.php")
+    .then(res => res.json())
+    .then(data => {
+      console.log("Fetched:", data);
       if (data.success) {
         setTestimonials(data.testimonials);
-      } else {
-        console.error("Data fetch failed:", data);
       }
     })
-    .catch((error) => {
+    .catch(error => {
       console.error("Fetch error:", error);
     });
 }, []);
+
 
 
   // Auto-slide every 5 seconds
