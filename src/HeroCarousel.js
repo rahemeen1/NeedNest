@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./HeroCarousel.css";
 import c1 from "./components/Logos/1.png";
 import c2 from "./components/Logos/2.png";
-import { Link } from "react-router-dom";
+
 
 const HeroCarousel = () => {
   const slides = [
