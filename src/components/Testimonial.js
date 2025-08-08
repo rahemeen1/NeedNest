@@ -8,14 +8,21 @@ const Testimonial = () => {
 
   // Fetch from backend
   useEffect(() => {
-    fetch("https://neednest.free.nf/getTestimonials.php")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          setTestimonials(data.testimonials);
-        }
-      });
-  }, []);
+  fetch("https://neednest.free.nf/getTestimonials.php")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Fetched Testimonials:", data); // Debug log
+      if (data.success) {
+        setTestimonials(data.testimonials);
+      } else {
+        console.error("Data fetch failed:", data);
+      }
+    })
+    .catch((error) => {
+      console.error("Fetch error:", error);
+    });
+}, []);
+
 
   // Auto-slide every 5 seconds
   useEffect(() => {
