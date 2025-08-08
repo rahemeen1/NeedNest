@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Testimonial.css";
 import patternBg from "./Logos/pattern.png";
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json");
+
 const Testimonial = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [index, setIndex] = useState(0);
