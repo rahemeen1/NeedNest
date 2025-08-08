@@ -7,7 +7,7 @@ const Testimonial = () => {
   const [index, setIndex] = useState(0);
 
 useEffect(() => {
-  fetch("https://neednest.free.nf/Backend/getTestimonials.php")
+  fetch("https://neednest.free.nf/getTestimonials.php")
     .then((res) => res.json())
     .then((data) => {
       console.log("Fetched testimonials:", data); // ✅ Console debug
