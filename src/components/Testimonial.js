@@ -7,19 +7,15 @@ const Testimonial = () => {
   const [index, setIndex] = useState(0);
 
   // Fetch from backend
- useEffect(() => {
-  fetch("https://cors-anywhere.herokuapp.com/https://neednest.free.nf/getTestimonials.php")
-    .then(res => res.json())
-    .then(data => {
-      console.log("Fetched:", data);
-      if (data.success) {
-        setTestimonials(data.testimonials);
-      }
-    })
-   
-}, []);
-
-
+  useEffect(() => {
+    fetch("https://neednest.free.nf/getTestimonials.php")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          setTestimonials(data.testimonials);
+        }
+      });
+  }, []);
 
   // Auto-slide every 5 seconds
   useEffect(() => {
